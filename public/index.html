@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>tic-tac-toe</title>
+</head>
+<body>
+    <div id="menu-screen">
+        <img src="/images/icon.png" id="logo">
+        <h1>Tic-Tac-Toe</h1>
+        <div id="mode-and-create">
+            <select id="mode-select">
+                <option value="">選擇模式</option>
+                <option value="classic">經典</option>
+            </select>
+            <button id="create-btn">建立房間</button>
+        </div>
+        <div id="join-area">
+            <input id="code-input" type="text" placeholder="輸入房間代碼">
+            <button id="join-btn">加入房間</button>
+        </div>
+    </div>
+
+    <div id="game-screen" style="display:none">
+        <h2>Tic-Tac-Toe</h2>
+        <div id="game-info">
+            <p id="mode-display"></p>
+            <p id="room-code-display"></p>
+        </div>
+        <p id="status"></p>
+        <div id="board"></div>
+        <div id="game-buttons">
+            <button id="rematch-btn" style="display:none">再來一場</button>
+            <button id="leave-btn">離開房間</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
