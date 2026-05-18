@@ -25,15 +25,24 @@
 
     <div id="game-screen" style="display:none">
         <h2>Tic-Tac-Toe</h2>
-        <div id="game-info">
-            <p id="mode-display"></p>
-            <p id="room-code-display"></p>
+        <div id="game-info-bar">
+            <div id="game-info">
+                <p id="mode-display"></p>
+                <p id="room-code-display"></p>
+            </div>
+            <button id="rules-btn">?</button>
         </div>
         <p id="status"></p>
         <div id="board"></div>
         <div id="game-buttons">
             <button id="rematch-btn" style="display:none">再來一場</button>
             <button id="leave-btn">離開房間</button>
+        </div>
+    </div>
+
+    <div id="rules-overlay" style="display:none">
+        <div id="rules-box">
+            <p id="rules-text"></p>
         </div>
     </div>
 

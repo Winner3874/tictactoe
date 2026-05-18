@@ -168,3 +168,22 @@ leaveBtn.addEventListener('click', () => {
     gameScreen.style.display = 'none';
     menuScreen.style.display = 'flex';
 });
+
+const rulesBtn = document.getElementById('rules-btn');
+const rulesOverlay = document.getElementById('rules-overlay');
+const rulesText = document.getElementById('rules-text');
+
+const rulesContent = {
+    'classic': '經典井字棋\n\n兩人輪流在 3x3 的棋盤上下棋\n率先連成一條線（橫、直、斜）的玩家獲勝\n若棋盤填滿仍無人連線則為平局'
+};
+
+rulesBtn.addEventListener('click', () => {
+    rulesText.innerText = rulesContent[selectedMode] ?? '此模式暫無規則說明';
+    rulesOverlay.style.display = 'flex';
+});
+
+rulesOverlay.addEventListener('click', (e) => {
+    if (e.target === rulesOverlay) {
+        rulesOverlay.style.display = 'none';
+    }
+});
